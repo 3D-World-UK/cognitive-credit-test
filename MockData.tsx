@@ -1,0 +1,241 @@
+// Description: Mock data for testing
+export default [
+    {
+      "companyName": "Abercrombie and Fitch",
+      "lastReportingDate": "07 Sep 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11-22 12:30",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Adler Group",
+      "lastReportingDate": "29 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11-29 6:00",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "American Airlines",
+      "lastReportingDate": "20 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-01",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "AMC",
+      "lastReportingDate": "04 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11-08, evening",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "BT Group",
+      "lastReportingDate": "28 Jul 2022",
+      "lastReportingPeriod": "FY22",
+      "nextReportingDate": "2022-11-3 7:00",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Carlsberg",
+      "lastReportingDate": "16 Aug 2022",
+      "lastReportingPeriod": "1H22",
+      "nextReportingDate": "2023-02",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Co-op",
+      "lastReportingDate": "29 Sep 2022",
+      "lastReportingPeriod": "1H22",
+      "nextReportingDate": "2023-04",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Ericsson",
+      "lastReportingDate": "20 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-01",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Diebold",
+      "lastReportingDate": "02 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2023-11-18 11:45",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Europcar",
+      "lastReportingDate": "28 Sep 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "General Motors",
+      "lastReportingDate": "25 Oct 2022",
+      "lastReportingPeriod": "1Q22",
+      "nextReportingDate": "2023-02-27, pre-noon",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Heineken",
+      "lastReportingDate": "01 Aug 2022",
+      "lastReportingPeriod": "1H22",
+      "nextReportingDate": "2023-02-15",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Iceland Foods",
+      "lastReportingDate": "01 Sep 2022",
+      "lastReportingPeriod": "1Q23",
+      "nextReportingDate": "2022-12-29",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Infrastructure & Energy Alternatives",
+      "lastReportingDate": "04 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Jaguar Land Rover",
+      "lastReportingDate": "29 Jul 2022",
+      "lastReportingPeriod": "1Q23",
+      "nextReportingDate": "20/12/2023 06:00:00",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Kantar",
+      "lastReportingDate": "25 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2023-12-20, morning",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Kellogg",
+      "lastReportingDate": "04 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2022-11-22 13:30",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "La Liga",
+      "lastReportingDate": "04 May 2022",
+      "lastReportingPeriod": "1H22",
+      "nextReportingDate": "2022-11",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Kraft Heinz",
+      "lastReportingDate": "27 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-02",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Levi Strauss",
+      "lastReportingDate": "06 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-01",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Lions Gate",
+      "lastReportingDate": "05 Aug 2022",
+      "lastReportingPeriod": "FY22",
+      "nextReportingDate": "2023-11-25 1:30",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Lufthansa",
+      "lastReportingDate": "27 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-03",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Mattel",
+      "lastReportingDate": "01 Nov 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-02",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "McLaren",
+      "lastReportingDate": "23 Aug 2022",
+      "lastReportingPeriod": "1Q22",
+      "nextReportingDate": "2023-11-17",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "MicroStrategy",
+      "lastReportingDate": "01 Nov 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-02",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Netflix",
+      "lastReportingDate": "20 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-01",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Papa Johns",
+      "lastReportingDate": "04 Aug 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2023-11-27 8:00",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "PG&E Corporation",
+      "lastReportingDate": "27 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-11-27 7:30",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Renault",
+      "lastReportingDate": "29 Jul 2022",
+      "lastReportingPeriod": "1H22",
+      "nextReportingDate": "2022-12",
+      "nextReportingInferred": true
+    },
+    {
+      "companyName": "Ryanair",
+      "lastReportingDate": "25 Jul 2022",
+      "lastReportingPeriod": "FY22",
+      "nextReportingDate": "2022-12-29",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Seagate",
+      "lastReportingDate": "26 Oct 2022",
+      "lastReportingPeriod": "1Q23",
+      "nextReportingDate": "2022-12-29 16:30",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Tesla",
+      "lastReportingDate": "19 Oct 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2022-12-09",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Uber Technologies",
+      "lastReportingDate": "01 Nov 2022",
+      "lastReportingPeriod": "3Q22",
+      "nextReportingDate": "2023-01-12 12:00",
+      "nextReportingInferred": false
+    },
+    {
+      "companyName": "Twitter",
+      "lastReportingDate": "22 Jul 2022",
+      "lastReportingPeriod": "2Q22",
+      "nextReportingDate": "2023-01-12, morning",
+      "nextReportingInferred": false
+    }
+  ]
