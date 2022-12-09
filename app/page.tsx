@@ -1,6 +1,6 @@
 import { Children } from "react";
 
-export default function Home({
+export default function Page({
     children,
   }: {
     children: React.ReactNode
