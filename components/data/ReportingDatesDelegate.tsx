@@ -4,7 +4,7 @@ import { sleep } from "../../utils";
 //Mock API Call
 
 export default async function FetchReportingDates(){
-  const response = await fetch('/api/reporting-dates',{cache: "no-store"});
+  const response = await fetch('/api/reporting-dates');
 
   console.log("Sleeping for 3 seconds...")
   //Mock Loading Time
