@@ -4,7 +4,8 @@ import { sleep } from "../../utils";
 //Mock API Call
 
 export default async function FetchReportingDates(){
-  const response = await fetch('/api/reporting-dates');
+  //hardcoded url. In a real world scenario, this would be a config value
+  const response = await fetch('/cognitive-credit-test/api/reporting-dates');
 
   console.log("Sleeping for 3 seconds...")
   //Mock Loading Time
