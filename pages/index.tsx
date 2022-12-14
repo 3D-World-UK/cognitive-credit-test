@@ -1,32 +1,57 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import { Dispatch, SetStateAction, useEffect, useState, useRef, useCallback } from 'react';
+import fetchReportingDates from '../components/data/ReportingDatesDelegate';
+import Footer from '../components/ui/Footer';
+import Header from '../components/ui/Header';
+import ReportingDateDisplay from '../components/ui/ReportingDateDisplay';
+import { ReportingDate } from '../interfaces';
 
 const Home: NextPage = () => {
+  const [filter, setFilter] = useState('');
+  const [data, setData] = useState<ReportingDate[]>([]);
+  const [unfilteredData, setUnfilteredData] = useState<ReportingDate[]>([]);
+  const [isFetching, setIsFetching] = useState(false);
+
+  const handleFetch = async () => {
+    setData([]);
+    setFilter('');
+    setIsFetching(true);
+    const data = await fetchReportingDates();
+    setIsFetching(false);
+    setData(data);
+    setUnfilteredData(data);    
+  }
+
+  useEffect(() => {
+    if(filter.length > 0 && data.length > 0) {
+      const filteredData = data.filter((item) => item.companyName.toLowerCase().includes(filter.toLowerCase()));
+      setData(filteredData);
+    }
+    else{
+      setData(unfilteredData);
+    }
+  }, [filter]);
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
+    <div className="flex flex-col h-screen overflow-hidden">
       <Head>
         <title>Ben Knowles - Cognitive Credit Technical Test</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="noindex" />
       </Head>
-      <header className="flex w-full h-24 items-center justify-center border-b dark:border-b-slate-900 bg-sky-200 dark:bg-slate-700 dark:text-white drop-shadow-md"><h1>Cognitive Credit - Report Schedule</h1></header>
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center bg-sky-100 dark:bg-slate-600 dark:text-white">
-
-      </main>
-      <footer className="flex h-24 w-full items-center justify-center border-t  dark:border-t-slate-900 bg-sky-200 dark:bg-slate-700 dark:text-white drop-shadow-md">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://www.linkedin.com/in/ben-knowles-3949a021/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          &copy; Ben Knowles
-        </a>
-      </footer>
+      <Header
+        filter={filter}
+        onChange={setFilter}
+        onFetchData={handleFetch}
+      />
+      <ReportingDateDisplay data={data} loading={isFetching} />
+      <Footer />
     </div>
   )
 }
 
 export default Home
+
+
