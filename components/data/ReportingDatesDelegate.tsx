@@ -1,5 +1,6 @@
 import { ReportingDate } from "../../interfaces";
 import { sleep } from "../../utils";
+import {format} from "date-fns";
 
 /**
  *  Function to parse the last reporting date
@@ -92,7 +93,7 @@ function lastReportingPeriod(date: string) {
   d.setMonth(periods[period]);
   d.setDate(0);
   d.setHours(23, 59, 59);
-  return date + " (" + d.toLocaleDateString() + ")";
+  return  `(${format(d,'yyyy-MM-dd')}) ${date}`;
 }
 
 /**
