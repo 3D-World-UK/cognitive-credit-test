@@ -1,4 +1,5 @@
 # Cognitive Credit coding exercise
+[![Deploy Next.js site to Pages](https://github.com/3D-World-UK/cognitive-credit-test/actions/workflows/nextjs.yml/badge.svg)](https://github.com/3D-World-UK/cognitive-credit-test/actions/workflows/nextjs.yml)
 ## Brief
 The brief was to build an application which enables a user to view a list of reporting dates for a set of companies. The user can filter the list by company name.
 
