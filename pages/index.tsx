@@ -6,16 +6,18 @@ import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header';
 import ReportingDateDisplay from '../components/ui/ReportingDateDisplay';
 import { ReportingDate } from '../interfaces';
-
+/**
+ * The main page for the application. This is a stateful component which wires up the data fetching and filtering.
+ * @returns 
+ */
 const Home: NextPage = () => {
   const [filter, setFilter] = useState('');
   const [data, setData] = useState<ReportingDate[]>([]);
   const [unfilteredData, setUnfilteredData] = useState<ReportingDate[]>([]);
   const [isFetching, setIsFetching] = useState(false);
 
+  // Handle fetch data button click, manage state and fetch data
   const handleFetch = async () => {
-    setData([]);
-    setFilter('');
     setIsFetching(true);
     const data: ReportingDate[] = await fetchReportingDates();
     setIsFetching(false);
@@ -23,6 +25,7 @@ const Home: NextPage = () => {
     setData(data);
   }
 
+  // Filter the data when the filter value changes
   useEffect(() => {
     if(filter.length > 0 && data.length > 0) {
       const filteredData = data.filter((item) => item.companyName.toLowerCase().includes(filter.toLowerCase()));
@@ -44,7 +47,9 @@ const Home: NextPage = () => {
       <Header
         filter={filter}
         onChange={setFilter}
-        onFetchData={handleFetch}
+        onFetchData={()=>{
+          setData([]); 
+          handleFetch();}}
       />
       <ReportingDateDisplay data={data} loading={isFetching} />
       <Footer />

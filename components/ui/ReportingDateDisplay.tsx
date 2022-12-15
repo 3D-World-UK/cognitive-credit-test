@@ -1,8 +1,6 @@
 import { ReportingDate } from '../../interfaces';
 import {
   ColDef,
-  GetRowIdFunc,
-  GetRowIdParams,
   GridOptions,
   GridApi,
 } from 'ag-grid-community';
@@ -30,39 +28,70 @@ export default function ReportingDateDisplay(props: { data: ReportingDate[], loa
   const [api, setApi] = useState<GridApi | null>(null);
   const [darkMode, setDarkMode] = useState<boolean>(true);
 
+  const DateRenderer = (params: { value: Date }) => params.value ? params.value.toLocaleDateString() : null;
   /**
    * Column Definitions
    */
   const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-    { field: 'companyName', headerName: 'Company Name', sortable: true },
-    { field: 'lastReportingDate', headerName: 'Last Reporting Date', sortable: true },
-    { field: 'lastReportingPeriod', headerName: 'Last Reporting Period', sortable: true },
-    { field: 'nextReportingDate', headerName: 'Next Reporting Date', sortable: true },
-    { field: 'nextReportingInferred', headerName: 'Next Reporting Inferred', sortable: true, cellRenderer: (params: any) => params.value ? '✅' : '❌', filter: 'set', filterParams: { values: ['true', 'false'] } },
+    { field: 'companyName', headerName: 'Company Name', minWidth: 200, sortable: true },
+    {
+      field: 'lastReportingDate',
+      headerName: 'Last Reporting Date',
+      minWidth: 120,
+      sortable: true,
+      cellRenderer: DateRenderer,
+    },
+    { 
+      field: 'lastReportingPeriod', 
+      headerName: 'Last Reporting Period', 
+      minWidth: 120, 
+      sortable: true,
+    },
+    {
+      field: 'nextReportingDate',
+      headerName: 'Next Reporting Date',
+      minWidth: 120,
+      sortable: true,
+      cellRenderer: DateRenderer,
+    },
+    {
+      field: 'nextReportingInferred',
+      headerName: 'Next Reporting Inferred',
+      minWidth: 80,
+      sortable: true,
+      cellRenderer: (params: any) => params.value ? '✅' : '❌',
+    },
   ]);
 
   /**
    * Side Effects
    */
   useEffect(() => {
-    if (window) {
-      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (event) => {
-        setDarkMode(event.matches);
-      });
-    }
-    setData(props.data);
+
     setLoading(props.loading);
+
+    // if the grid is ready, set the data and refresh the grid. otherwise, clear the data and wait for loading to complete.
     if (api) {
       if (props.loading) {
+        api.setRowData([]);
+        api.refreshCells();
         api.showLoadingOverlay();
       } else {
+        setData(props.data);
         api.setRowData(props.data)
         api.refreshHeader();
         api.hideOverlay();
       }
       if (gridReady) api.sizeColumnsToFit();
     }
+    //Apply dark mode if the user has set it in their browser
+    if (window) {
+      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (event) => {
+        setDarkMode(event.matches);
+      });
+    }
+    // remove the event listener when the component is unmounted.
     return () => {
       if (window) {
         window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', (event) => {
