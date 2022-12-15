@@ -16,6 +16,7 @@ It was easy to create the desired responsive layout with little effort
 * **Github** was used as both my build environment and my hosting environment for the solution. Since this is a mock application I was able to produce a static export to Github Pages using Github Actions. The interactive elements of the application run on the clientside and the api call is simply fetches from a static resource. The one caveat to this of course was that there could be no server side logic.
 
 ## Result
+![App Preview](/public/docs/AppPreview.png)
 The application can be accessed from https://3d-world-uk.github.io/cognitive-credit-test/
 or alternatively checked out from this repository and run locally for development and debugging. 
 
