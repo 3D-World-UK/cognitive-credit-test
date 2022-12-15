@@ -17,10 +17,10 @@ const Home: NextPage = () => {
     setData([]);
     setFilter('');
     setIsFetching(true);
-    const data = await fetchReportingDates();
+    const data: ReportingDate[] = await fetchReportingDates();
     setIsFetching(false);
-    setData(data);
     setUnfilteredData(data);    
+    setData(data);
   }
 
   useEffect(() => {

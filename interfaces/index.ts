@@ -1,8 +1,8 @@
 type ReportingDate = {
     "companyName": string,
-    "lastReportingDate": string,
-    "lastReportingPeriod": string,
-    "nextReportingDate": string,
+    "lastReportingDate": Date,
+    "lastReportingPeriod": Date,
+    "nextReportingDate": Date,
     "nextReportingInferred": boolean
 }
 
