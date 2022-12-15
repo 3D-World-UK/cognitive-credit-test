@@ -34,3 +34,7 @@ There is one key difference to be aware of. The hosted application is the static
 I feel like the choice of technologies was suitable for the task and the timescale. However, in production, the application would be deployed with a Next.js server side, an api over rest, grpc or GraphQL *(depending on requirements)* and a front end using a combination of statically rendered and dynamic content. 
 
 With more time I would have added some unit tests to ensure the date handling logic is robust. I could have also added some better support for accessibility or looked a little deeper at the lighthouse score and any potential performance bottlenecks.
+
+### Bonus Features
+* Support for Light and Dark mode (try switching it in your OS and see the app update in real-time)
+* Responsive designe which works on both desktop and mobile
