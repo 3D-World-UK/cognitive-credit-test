@@ -40,7 +40,8 @@ export default function Header(props: { filter: string, onChange: (value: string
                 <button
                     id="fetch-data-btn"
                     className="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 px-4 rounded drop-shadow-xl"
-                    onClick={(event) => handleClick(event)}>
+                    onClick={(event) => handleClick(event)}
+                    title="Mock API request with simulated wait of 3 seconds">
                     Fetch Data
                 </button>
                 <input
