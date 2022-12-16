@@ -14,7 +14,7 @@ It was easy to create the desired responsive layout with little effort
 
 * **AG-Grid** Is a very mature solution for interactive data grids. It has a React implementation and works well with the latest best practices.
 
-* **Github** was used as both my build environment and my hosting environment for the solution. Since this is a mock application I was able to produce a static export to Github Pages using Github Actions. The interactive elements of the application run on the clientside and the api call is simply fetches from a static resource. The one caveat to this of course was that there could be no server side logic.
+* **Github** was used as both my build environment and my hosting environment for the solution. Since this is a mock application I was able to produce a static export to Github Pages using Github Actions. The interactive elements of the application run on the clientside and the api call simply fetches from a static resource. The one caveat to this of course was that there could be no server side logic or state.
 
 ## Result
 ![App Preview](/public/docs/AppPreview.png)
